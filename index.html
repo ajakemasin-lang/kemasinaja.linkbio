@@ -1,28 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KemasinAja | Edible Film</title>
-  <style>
-    body { font-family: Times New Roman, sans-serif; text-align: center; background: #fdfdfd; }
-    .logo { font-size: 28px; font-weight: bold; margin-top: 20px; }
-    .tagline { font-size: 16px; margin: 10px 0; color: #555; }
-    .btn { display: block; margin: 10px auto; padding: 12px; width: 80%;
-           background: #222; color: #fff; text-decoration: none; border-radius: 8px; }
-    .btn:hover { background: #444; }
-    footer { margin-top: 30px; font-size: 12px; color: #888; }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kemasin Aja — Edible Film</title>
+  <meta name="description" content="Edible film yang higienis, lezat, dan siap produksi. Kemasin Aja." />
+  <link rel="icon" href="assets/logo_kemasinaja.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="https://drive.google.com/file/d/1JvsSAeXHPxW8fP2fFMPawflbPS56CWFS/view?usp=sharing">KemasinAja</div>
-  <div class="tagline">emang ada yang bisa gantiin plastik?</div>
+  <header class="navbar">
+    <div class="brand">
+      <img src="assets/logo_kemasinaja.png" alt="Kemasin Aja" class="logo">
+      <span class="brand-name">Kemasin Aja</span>
+    </div>
+    <nav>
+      <a href="#produk">Produk</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#harga">Harga</a>
+      <a href="#faq">FAQ</a>
+      <button id="themeToggle" class="btn-outline">Mode</button>
+    </nav>
+  </header>
 
-  <a href="https://www.instagram.com/kemasinaja__?utm_source=ig_web_button_share_sheet&igsh=bzVtNnV5ZGd0ODRm" class="btn">Instagram 📸</a>
-  <a href="https://www.tiktok.com/@kemasinaja2?_r=1&_t=ZS-91Ao6KIpOsP" class="btn">TikTok 🎶</a>
-  <a href="https://wa.me/628xxxxxxx" class="btn">WhatsApp 💬</a>
-  <a href="https://shopee.co.id/kemasinaja" class="btn">Shopee 🛒</a>
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('assets/hero.jpg');"></div>
+    <div class="hero-content">
+      <h1>Edible Film Kemasin Aja</h1>
+      <p>Tipis, higienis, dan lezat—kemasan yang bisa dimakan, cerita yang melekat.</p>
+      <div class="cta-row">
+        <a href="#produk" class="btn-primary">Jelajahi Produk</a>
+        <a href="#harga" class="btn-secondary">Lihat Harga</a>
+      </div>
+    </div>
+  </section>
 
-  <footer>© 2025 KemasinAja | Edible Film</footer>
+  <main>
+    <section id="produk" class="section">
+      <h2>Varian Produk</h2>
+      <p class="section-sub">Klik kartu untuk detail komposisi, rasa, dan penggunaan.</p>
+
+      <div class="card-grid">
+        <article class="card" data-id="plain">
+          <div class="card-img">
+            <img src="assets/product_plain.jpg" alt="Plain Savory">
+            <img src="assets/badge_best.png" alt="Best Seller" class="badge">
+          </div>
+          <div class="card-body">
+            <h3>Plain Savory</h3>
+            <p>Netral, bening, elastis—ideal untuk snack gurih & lauk.</p>
+            <div class="card-meta">
+              <span class="price">Rp 28.000 / roll kecil</span>
+            </div>
+            <button class="btn-outline detail-btn" data-id="plain">Detail & Komposisi</button>
+            <button class="btn-primary add-btn" data-id="plain">Tambah ke Keranjang</button>
+          </div>
+        </article>
+
+        <article class="card" data-id="spice">
+          <div class="card-img">
+            <img src="assets/product_spice.jpg" alt="Spice Boost">
+          </div>
+          <div class="card-body">
+            <h3>Spice Boost</h3>
+            <p>Sentuhan rempah halus—untuk produk pedas/berbumbu.</p>
+            <div class="card-meta">
+              <span class="price">Rp 32.000 / roll kecil</span>
+            </div>
+            <button class="btn-outline detail-btn" data-id="spice">Detail & Komposisi</button>
+            <button class="btn-primary add-btn" data-id="spice">Tambah ke Keranjang</button>
+          </div>
+        </article>
+
+        <article class="card" data-id="sweet">
+          <div class="card-img">
+            <img src="assets/product_sweet.jpg" alt="Sweet Glow">
+          </div>
+          <div class="card-body">
+            <h3>Sweet Glow</h3>
+            <p>Glossy, manis ringan—cocok untuk dessert & pastry.</p>
+            <div class="card-meta">
+              <span class="price">Rp 34.000 / roll kecil</span>
+            </div>
+            <button class="btn-outline detail-btn" data-id="sweet">Detail & Komposisi</button>
+            <button class="btn-primary add-btn" data-id="sweet">Tambah ke Keranjang</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeri" class="section">
+      <h2>Galeri</h2>
+      <p class="section-sub">Klik untuk memperbesar.</p>
+      <div class="gallery-grid">
+        <img src="assets/product_plain.jpg" alt="Plain" class="gallery-item" data-src="assets/product_plain.jpg">
+        <img src="assets/product_spice.jpg" alt="Spice" class="gallery-item" data-src="assets/product_spice.jpg">
+        <img src="assets/product_sweet.jpg" alt="Sweet" class="gallery-item" data-src="assets/product_sweet.jpg">
+        <img src="assets/hero.jpg" alt="Hero" class="gallery-item" data-src="assets/hero.jpg">
+      </div>
+    </section>
+
+    <section id="harga" class="section">
+      <h2>Harga & Paket</h2>
+      <p class="section-sub">Pilih sesuai kebutuhan produksi. Diskon untuk volume besar.</p>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Starter</h3>
+          <p class="price-big">Rp 28.000</p>
+          <p class="unit">Per roll kecil (10 cm × 10 m)</p>
+          <ul>
+            <li>Bahan food-grade</li>
+            <li>Plain Savory</li>
+            <li>Lead time 2–3 hari</li>
+          </ul>
+          <button class="btn-primary add-plan" data-plan="starter">Pilih Paket</button>
+        </div>
+        <div class="price-card featured">
+          <h3>Pro</h3>
+          <p class="price-big">Rp 32.000</p>
+          <p class="unit">Per roll kecil (12 cm × 12 m)</p>
+          <ul>
+            <li>Varian Spice/Sweet</li>
+            <li>Kustom ketebalan</li>
+            <li>Lead time 2–4 hari</li>
+          </ul>
+          <button class="btn-primary add-plan" data-plan="pro">Pilih Paket</button>
+        </div>
+        <div class="price-card">
+          <h3>Bulk</h3>
+          <p class="price-big">Hubungi kami</p>
+          <p class="unit">Roll besar (≥ 20 cm × 50 m)</p>
+          <ul>
+            <li>Harga grosir</li>
+            <li>Label custom</li>
+            <li>QC prioritas</li>
+          </ul>
+          <button class="btn-secondary contact-btn">Kontak</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Apakah edible film aman dimakan?</summary>
+        <p>Ya, menggunakan bahan food-grade dan proses higienis. Tidak mengandung bahan berbahaya.</p>
+      </details>
+      <details>
+        <summary>Bisa custom ukuran & rasa?</summary>
+        <p>Bisa. Ketebalan, lebar, dan profil rasa dapat disesuaikan kebutuhan produksi.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="cart">
+      <span id="cartCount">0</span> item di keranjang
+      <button id="openCart" class="btn-outline">Buka</button>
+    </div>
+    <small>© Kemasin Aja — Edible Film</small>
+  </footer>
+
+  <!-- Modal detail -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Modal gallery -->
+  <div id="lightbox" class="lightbox hidden">
+    <button class="lightbox-close">×</button>
+    <img id="lightboxImg" src="" alt="preview">
+  </div>
+
+  <!-- Modal cart -->
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close">×</button>
+      <h3>Keranjang</h3>
+      <div id="cartItems"></div>
+      <div class="cart-total">
+        <strong>Total:</strong> <span id="cartTotal">Rp 0</span>
+      </div>
+      <button class="btn-primary" id="checkoutBtn">Checkout (demo)</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
