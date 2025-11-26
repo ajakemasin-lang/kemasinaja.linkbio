@@ -1,61 +1,75 @@
-/* Discord-inspired dark theme */
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  background: #2f3136;
-  color: #dcddde;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
 }
 
-.app { display: flex; height: 100vh; }
+.app {
+  display: flex;
+}
 
 .sidebar {
-  width: 220px; background: #202225; padding: 20px;
-  display: flex; flex-direction: column; gap: 20px;
+  width: 200px;
+  background-color: #0b3d91;
+  color: white;
+  padding: 20px;
 }
-.sidebar .logo { width: 100%; border-radius: 8px; }
+
+.sidebar .logo {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .sidebar nav a {
-  display: block; color: #b9bbbe; text-decoration: none;
-  margin: 8px 0; font-weight: 600;
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
 }
-.sidebar nav a:hover { color: #fff; }
 
-.main { flex: 1; padding: 20px; overflow-y: auto; }
-.header h1 { margin: 0; color: #fff; }
-.header p { color: #b9bbbe; }
+.main {
+  flex: 1;
+  padding: 20px;
+}
 
-.section { margin-top: 30px; }
-.cards { display: flex; gap: 20px; flex-wrap: wrap; }
+.header h1 {
+  color: #0b3d91;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
 .card {
-  background: #36393f; border-radius: 8px; padding: 12px;
-  width: 220px; text-align: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.card img { width: 100%; border-radius: 6px; }
-.card h3 { margin: 10px 0 6px; color: #fff; }
-.card p { font-size: 14px; color: #b9bbbe; }
-.price { display: block; margin: 8px 0; font-weight: bold; color: #43b581; }
-.card button {
-  background: #5865f2; border: none; color: #fff;
-  padding: 8px 12px; border-radius: 6px; cursor: pointer;
-}
-.card button:hover { background: #4752c4; }
 
-details {
-  background: #36393f; padding: 10px; border-radius: 6px;
-  margin-bottom: 10px;
+.card img {
+  width: 100%;
+  border-radius: 5px;
 }
-summary { cursor: pointer; font-weight: bold; }
 
-.modal {
-  position: fixed; inset: 0; background: rgba(0,0,0,0.7);
-  display: grid; place-items: center; z-index: 100;
+.card h3 {
+  margin-top: 10px;
+  color: #0b3d91;
 }
-.modal.hidden { display: none; }
-.modal-content {
-  background: #36393f; color: #dcddde; border-radius: 8px;
-  padding: 20px; max-width: 500px; width: 90%;
+
+.card .price {
+  font-weight: bold;
+  margin: 10px 0;
 }
-.modal-close {
-  background: transparent; border: none; color: #fff;
-  font-size: 24px; float: right; cursor: pointer;
-}
+
+button {
+  background-color: #0b3d91;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px 5px 0 0;
