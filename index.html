@@ -22,7 +22,7 @@
     <main class="main">
       <header class="header">
         <h1>Edible Film Kemasin Aja</h1>
-        <p>Tipis, higienis, lezat — kemasan yang bisa dimakan.</p>
+        <p>Tipis, lezat, fungsional — kemasan yang bisa dimakan.</p>
       </header>
 
       <section id="produk" class="section">
@@ -34,6 +34,7 @@
             <p>Netral, bening, elastis — cocok untuk snack gurih.</p>
             <span class="price">Rp 10.000</span>
             <button class="detail-btn">Detail</button>
+            <button class="order-btn">Pesan</button> <!-- Tambahkan di sini -->
           </div>
           <div class="card" data-id="spice">
             <img src="assets/spice.jpg" alt="Spice Boost">
@@ -41,6 +42,7 @@
             <p>Sentuhan rempah halus untuk produk pedas.</p>
             <span class="price">Rp 10.000</span>
             <button class="detail-btn">Detail</button>
+            <button class="order-btn">Pesan</button> <!-- Tambahkan di sini -->
           </div>
           <div class="card" data-id="sweet">
             <img src="assets/sweet.jpg" alt="Sweet Glow">
@@ -48,6 +50,7 @@
             <p>Glossy, manis ringan — cocok untuk dessert.</p>
             <span class="price">Rp 10.000</span>
             <button class="detail-btn">Detail</button>
+            <button class="order-btn">Pesan</button> <!-- Tambahkan di sini -->
           </div>
         </div>
       </section>
@@ -80,6 +83,13 @@
     <div class="modal-content">
       <button class="modal-close">×</button>
       <div id="modalBody"></div>
+      <div id="orderOptions" class="hidden">
+  <h3>Pilih Media Sosial untuk Pemesanan:</h3>
+  <button class="social-btn" data-platform="Instagram">Instagram</button>
+  <button class="social-btn" data-platform="TikTok">TikTok</button>
+  <button class="social-btn" data-platform="WhatsApp">WhatsApp</button>
+</div>
+<p id="orderSuccess" class="hidden success-msg">✅ Pemesanan berhasil! Kami akan segera menghubungi Anda.</p>
     </div>
   </div>
 
