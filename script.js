@@ -1,65 +1,54 @@
-const modal = document.getElementById('modal');
-const modalBody = document.getElementById('modalBody');
-const closeBtn = document.querySelector('.modal-close');
+// Tombol Detail
+document.querySelectorAll(".detail-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const id = btn.closest(".card").getAttribute("data-id");
+    let detail = "";
 
-const products = {
-  plain: {
-    name: "Plain Savory",
-    price: "Rp 10.000",
-    img: "assets/plain.jpg",
-    desc: "Netral, bening, elastis — cocok untuk snack gurih."
-  },
-  spice: {
-    name: "Spice Boost",
-    price: "Rp 10.000",
-    img: "assets/spice.jpg",
-    desc: "Sentuhan rempah halus untuk produk pedas."
-  },
-  sweet: {
-    name: "Sweet Glow",
-    price: "Rp 10.000",
-    img: "assets/sweet.jpg",
-    desc: "Glossy, manis ringan — cocok untuk dessert."
-  }
-};
+    if (id === "plain") {
+      detail = "<h3>Plain Savory</h3><p>Film netral, bening, elastis. Cocok untuk snack gurih seperti keripik, nugget, atau bakso.</p>";
+    } else if (id === "spice") {
+      detail = "<h3>Spice Boost</h3><p>Sentuhan rempah halus. Cocok untuk produk pedas seperti sambal, keripik balado, atau ayam geprek.</p>";
+    } else if (id === "sweet") {
+      detail = "<h3>Sweet Glow</h3><p>Glossy dan manis ringan. Cocok untuk dessert seperti puding, mochi, atau brownies.</p>";
+    }
 
-document.querySelectorAll('.detail-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const id = btn.parentElement.dataset.id;
-    const p = products[id];
-    modalBody.innerHTML = `
-      <img src="${p.img}" alt="${p.name}" style="width:100%;border-radius:6px;">
-      <h3>${p.name}</h3>
-      <p>${p.desc}</p>
-      <strong>${p.price}</strong>
-    `;
-    modal.classList.remove('hidden');
-    // Tombol Pesan → buka modal dengan pilihan medsos
+    document.getElementById("modalBody").innerHTML = detail;
+    document.getElementById("orderOptions").classList.add("hidden");
+    document.getElementById("orderSuccess").classList.add("hidden");
+    document.getElementById("modal").classList.remove("hidden");
+  });
+});
+
+// Tombol Pesan
 document.querySelectorAll(".order-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-    document.getElementById("modal").classList.remove("hidden");
+    document.getElementById("modalBody").innerHTML = "";
     document.getElementById("orderOptions").classList.remove("hidden");
     document.getElementById("orderSuccess").classList.add("hidden");
+    document.getElementById("modal").classList.remove("hidden");
   });
 });
 
-// Klik medsos → buka link + tampilkan pesan sukses
-document.querySelectorAll(".social-btn").forEach(btn => {
+// Pilih harga
+document.querySelectorAll(".price-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-    const platform = btn.getAttribute("data-platform");
-    if (platform === "WhatsApp") {
-      window.open("https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Edible%20Film", "_blank");
-    } else if (platform === "Instagram") {
-      window.open("https://instagram.com/kemasinaja", "_blank");
-    } else if (platform === "TikTok") {
-      window.open("https://tiktok.com/@kemasinaja", "_blank");
-    }
-    document.getElementById("orderOptions").classList.add("hidden");
-    document.getElementById("orderSuccess").classList.remove("hidden");
-  });
-});
+    const selected = btn.getAttribute("data-price");
+    document.getElementById("orderOptions").innerHTML = `
+      <p>Paket dipilih: <strong>${selected}</strong></p>
+      <button id="confirmOrder">Pesan Sekarang</button>
+    `;
+    document.getElementById("orderSuccess").classList.add("hidden");
+
+    setTimeout(() => {
+      document.getElementById("confirmOrder").addEventListener("click", () => {
+        document.getElementById("orderOptions").classList.add("hidden");
+        document.getElementById("orderSuccess").classList.remove("hidden");
+      });
+    }, 100);
   });
 });
 
-closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
-modal.addEventListener('click', e => { if (e.target === modal) modal.classList.add('hidden'); });
+// Tutup modal
+document.querySelector(".modal-close").addEventListener("click", () => {
+  document.getElementById("modal").classList.add("hidden");
+});
