@@ -1,101 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KemasinAja — Edible Film</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Minuman</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <img src="assets/logo.png" alt="KemasinAja" class="logo" />
-      <nav>
-        <a href="#produk">Produk</a>
-        <a href="#harga">Harga</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-    </aside>
 
-    <!-- Main -->
-    <main class="main">
-      <header class="header">
-        <h1>Edible Film KemasinAja</h1>
-        <p>Tipis, higienis, lezat — kemasan yang bisa dimakan.</p>
-      </header>
+    <h1 class="judul">Daftar Minuman</h1>
 
-      <!-- Produk -->
-      <section id="produk" class="section">
-        <h2>Varian Produk</h2>
-        <div class="cards">
-          <div class="card" data-id="plain">
-            <img src="assets/plain.jpg" alt="Plain Savory" />
-            <h3>Plain Savory</h3>
-            <p>Netral, bening, elastis — cocok untuk snack gurih.</p>
-            <span class="price">Rp 10.000</span>
-            <button class="detail-btn">Detail</button>
-            <button class="order-btn">Pesan</button>
-          </div>
-          <div class="card" data-id="spice">
-            <img src="assets/spice.jpg" alt="Spice Boost" />
-            <h3>Spice Boost</h3>
-            <p>Sentuhan rempah halus untuk produk pedas.</p>
-            <span class="price">Rp 10.000</span>
-            <button class="detail-btn">Detail</button>
-            <button class="order-btn">Pesan</button>
-          </div>
-          <div class="card" data-id="sweet">
-            <img src="assets/sweet.jpg" alt="Sweet Glow" />
-            <h3>Sweet Glow</h3>
-            <p>Glossy, manis ringan — cocok untuk dessert.</p>
-            <span class="price">Rp 10.000</span>
-            <button class="detail-btn">Detail</button>
-            <button class="order-btn">Pesan</button>
-          </div>
+    <div class="products-container">
+
+        <div class="product">
+            <img src="img/spice.jpg" alt="Spice Boost">
+            <div class="product-info">
+                <h2>Spice Boost</h2>
+                <p>Croicaju kampeismie creplief blier alent.</p>
+                <p class="price">Rp 14.000</p>
+                <button class="detail-btn">Detail</button>
+                <button class="order-btn">Pesan</button>
+            </div>
         </div>
-      </section>
 
-      <!-- Harga -->
-      <section id="harga" class="section">
-        <h2>Harga Paket</h2>
-        <ul>
-          <li>Starter: Rp 10.000 / roll kecil</li>
-          <li>Pro: Rp 20.000 / roll kecil</li>
-          <li>Bulk: Hubungi kami</li>
-        </ul>
-      </section>
+        <div class="product">
+            <img src="img/sweet.jpg" alt="Sweet Glow">
+            <div class="product-info">
+                <h2>Sweet Glow</h2>
+                <p>Cootiej kmpesnier cosielt bueriolen.</p>
+                <p class="price">Rp 12.000</p>
+                <button class="detail-btn">Detail</button>
+                <button class="order-btn">Pesan</button>
+            </div>
+        </div>
 
-      <!-- FAQ -->
-      <section id="faq" class="section">
-        <h2>FAQ</h2>
-        <details>
-          <summary>Apakah edible film aman dimakan?</summary>
-          <p>Ya, menggunakan bahan food-grade dan higienis.</p>
-        </details>
-        <details>
-          <summary>Bisa custom ukuran & rasa?</summary>
-          <p>Bisa, sesuai kebutuhan produksi.</p>
-        </details>
-      </section>
-    </main>
-  </div>
+        <div class="product">
+            <img src="img/citrus.jpg" alt="Citrus Fresh">
+            <div class="product-info">
+                <h2>Citrus Fresh</h2>
+                <p>Coticaju kmpesmier creplief cienc alent.</p>
+                <p class="price">Rp 13.000</p>
+                <button class="detail-btn">Detail</button>
+                <button class="order-btn">Pesan</button>
+            </div>
+        </div>
 
-  <!-- Modal -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <button class="modal-close">×</button>
-      <div id="modalBody"></div>
-      <div id="orderOptions" class="hidden">
-        <h3>Pilih Paket:</h3>
-        <button class="price-btn" data-price="Starter">Starter (Rp 10.000)</button>
-        <button class="price-btn" data-price="Pro">Pro (Rp 20.000)</button>
-        <button class="price-btn" data-price="Bulk">Bulk (Hubungi Kami)</button>
-      </div>
-      <p id="orderSuccess" class="hidden success-msg">✅ Pemesanan telah selesai. Mohon tunggu konfirmasi dari tim KemasinAja.</p>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <div class="footer-order">
+        <label>Pilih Harga:</label>
+        <select>
+            <option>Rp 10.000</option>
+            <option>Rp 12.000</option>
+            <option>Rp 14.000</option>
+            <option>Rp 15.000</option>
+        </select>
+        <button class="order-btn">Pesan Sekarang</button>
+        <button class="cancel-btn">Batal</button>
+    </div>
+
 </body>
 </html>
